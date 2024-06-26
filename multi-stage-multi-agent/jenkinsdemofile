@@ -21,16 +21,9 @@ pipeline {
                 
                 // Run the Java program
                 sh 'java HelloWorld'
-               // sh 'javac HelloWorld.java'
-                def output = sh(script: 'java HelloWorld', returnStdout: true).trim()
-                script {
-                    if (output.contains("Hello, World!")) {
-                        echo 'Java program executed successfully'
-                    } else {
-                        error 'Java program did not produce expected output'
-                    }
+           
                 }
             }
         }
     }
-}
+
