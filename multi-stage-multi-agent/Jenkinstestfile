@@ -1,6 +1,9 @@
 pipeline {
-    agent any
-
+    agent {
+        docker {
+            image 'maven:3.8.4-openjdk-11'  // Use an image with Maven and JDK 11 installed
+        }
+    }
     stages {
         stage('Checkout') {
             steps {
