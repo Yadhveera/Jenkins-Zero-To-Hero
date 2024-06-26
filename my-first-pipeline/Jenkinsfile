@@ -5,8 +5,6 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        sh 'hostname'
-        sh 'docker --version'
         sh 'node --version'
       }
     }
