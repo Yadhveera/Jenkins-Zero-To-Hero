@@ -14,7 +14,14 @@ pipeline {
         
         stage('Build and Run') {
             steps {
+
+
+               // Compile the Java program
                 sh 'javac HelloWorld.java'
+                
+                // Run the Java program
+                sh 'java HelloWorld'
+               // sh 'javac HelloWorld.java'
                 def output = sh(script: 'java HelloWorld', returnStdout: true).trim()
                 script {
                     if (output.contains("Hello, World!")) {
