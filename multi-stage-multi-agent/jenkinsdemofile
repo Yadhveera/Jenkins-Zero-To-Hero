@@ -17,7 +17,7 @@ pipeline {
 
 
                // Compile the Java program
-                sh 'javac HelloWorld.java'
+                sh 'javac multi-stage-multi-agent/jenkinsdemofile/HelloWorld.java'
                 
                 // Run the Java program
                 sh 'java HelloWorld'
